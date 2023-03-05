@@ -1,18 +1,28 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
+
+  <h1>Hola mundo</h1>
+
+  <button @click="goToDayBook" class="btn btn-primary">Prueba</button>
+  <button @click="goToDayBook" class="btn btn-secondary">Prueba</button>
+  <button @click="goToDayBook" class="btn btn-success">Prueba</button>
+
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+  },
+
+  methods:{
+    goToDayBook(){
+      this.$router.push({name: 'no-entry'});
+    }
   }
 }
 </script>
